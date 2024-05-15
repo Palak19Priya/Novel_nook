@@ -1,0 +1,97 @@
+<html><head><title>ORDER</title>
+    <link rel="stylesheet" href="external.css">
+            </style>
+        
+<script>
+        function validateCheckboxes() {
+                var checkboxes = document.getElementsByName('option');
+                var isChecked = false;
+                for (var i = 0; i < checkboxes.length; i++) {
+                  if (checkboxes[i].checked) {
+                    isChecked = true;
+                    break;
+                  }
+                }
+                if (!isChecked) {
+                  alert("Please check at least one checkbox");
+                  return false;
+                }
+                return true;
+              }
+
+        function validateName() {
+                var nameInput = document.getElementById('name').value;
+                var lettersOnlyRegex = /^[A-Za-z]+$/;
+                if (!lettersOnlyRegex.test(nameInput)) {
+                  alert("Please enter only letters in the name field");
+                  return false;
+                }
+                return true;
+              }
+
+        function validateForm() {
+                var title = document.forms["myForm"]["title"].value;
+                var author = document.forms["myForm"]["author"].value;
+                var fname = document.forms["myForm"]["fname"].value;
+                var lname = document.forms["myForm"]["lname"].value;
+                var email = document.forms["myForm"]["email"].value;
+                var contact = document.forms["myForm"]["contact"].value;
+                var delivery = document.forms["myForm"]["delivery"].value;
+        }
+        
+</script>
+        </head>
+<body bgcolor="728fce" topmargin="40" bottommargin="50" leftmargin="100" rightmargin="50">
+    <center><font size=70 color="290710" face="stencil"><u  class="text-shadow">Order novels online</u></font></center><br><br>
+    <font color="black"><H2>NOVEL DETAILS</H2></font>  
+
+  <form onsubmit="return validateCheckboxes()">
+    <label><input type="checkbox" name="option" value="option1"> Kindle</label>
+    <label><input type="checkbox" name="option" value="option2"> Paperback</label>
+    <label><input type="checkbox" name="option" value="option3"> Hardcover</label>
+    <label><input type="checkbox" name="option" value="option4"> Audiobook</label>
+   
+
+    <h2>Register</h2>
+    <!-- <form onsubmit="return validateName()"> 
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+  
+      <input type="submit" value="Submit">
+     </form> -->
+    
+    <form>
+            <br><br>
+            <label>Book Title:</label><br>
+            <input type="text" required><br>
+            <label for="author">Author's name:</label><br>
+            <input type="text" required><br>
+            <label>Quantity:</label><br>
+            <input  style="border: 2px solid rgb(31, 36, 37);
+            border-radius: 4px;" type="number" required><br><br>
+
+    <font color="black"><H2>PERSONAL DETAILS</H2></font> 
+            <label>First name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" required><br><br>
+            <label>Last name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text"><br><br>
+            <label>E-mail:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input  style="border: 2px solid rgb(31, 36, 37);
+            border-radius: 4px;" type="email" required><br><br>
+            <label>Contact no. :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input  style="border: 2px solid rgb(31, 36, 37);
+            border-radius: 4px;" type="tel" value=" " required><br><br>   
+            <label>Delivery Address:&nbsp;</label>
+            <input type="text" required><br><br>
+    <font color="black"><H2>Mode of payment:</H2></font>                    
+            <label>Online</label>
+            <input type="radio" name="options" required>
+            <label>Cash on delivery</label>
+            <input type="radio" name="options" required><br><br><br>
+
+            <input type="submit" value="Submit">&nbsp;&nbsp;
+            <input type="reset">
+          </form> 
+          <BR><BR>
+    <a href="#top">Go to the top of the page</a>
+    
