@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Log out of Novel Nook to keep your account safe and secure.">
+    <title>Logout - Novel Nook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('gal.gif') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .logout-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: yellow;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+        h1 {
+            color: lightblue;
+            margin-bottom: 20px;
+        }
+        .logout-container button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .logout-btn {
+            background-color: #8A2BE2;
+            color: white;
+        }
+        .cancel-btn {
+            background-color: #333;
+            color: white;
+        }
+        .logout-btn:hover, .cancel-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="logout-container">
+    <h1>Are you sure you want to log out?</h1>
+    <button class="logout-btn" onclick="logout()">Log Out</button>
+    <button class="cancel-btn" onclick="cancel()">Cancel</button>
+</div>
+
+<script>
+    function logout() {
+        // Simulate logging out by redirecting to a logout confirmation page
+        alert("You have been logged out.");
+        window.location.href = 'home.html';  // Redirect to the homepage or login page
+    }
+
+    function cancel() {
+        // Redirect back to the previous page or home page
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
