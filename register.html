@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="register_css.css">
+
+</head>
+
+<body>
+
+    <div class="dropdown">
+        <button class="dropdown-btn">&#9776;</button>
+        <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="tbr.html">TBR List</a>
+            <a href="logout.html">Log Out</a>
+            <a href="about.html">About Us</a>
+            <a href="home.html">Home Page</a>
+        </div>
+    </div>
+
+
+    <h1>Sign In</h1>
+    <form id="registrationForm">
+        <br>
+
+        <div>
+            <label for="fullname">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" oninput="upperCase()" onfocus="myFunction(this)">
+            <span id="fullnameError" class="error"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+        <br>
+
+        <div>
+            <label for="username">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="username" name="username" placeholder="Enter your desired username" onfocus="myFunction(this)">
+            <span id="usernameError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="password" id="password" name="password" placeholder="Enter a strong password" onfocus="myFunction(this)">
+            <span id="passwordError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="confirmPassword">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Confirm Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" onfocus="myFunction(this)">
+            <span id="confirmPasswordError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="email" id="email" name="email" placeholder="Enter a valid email id" onfocus="myFunction(this)">
+            <span id="emailError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter your contact number" onfocus="myFunction(this)">
+            <span id="contactError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+            <span id="genderError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="birthdate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Birthdate:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="date" id="birthdate" name="birthdate" onfocus="myFunction(this)">
+            <span id="birthdateError" class="error"></span>
+        </div>
+        <br>
+
+        <div>
+            <label for="nationality">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nationality:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality" onfocus="myFunction(this)">
+            <span id="nationalityError" class="error"></span>
+        </div>
+        <br>
+
+        <div style="text-align:center;">
+            <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="clear-button" onclick="clearForm()">Clear</button>
+        </div>
+        <br>
+        <div>
+            <center>Already have an account?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.html">
+                <font color="orange">Login</font></a></center>
+        </div>
+        <br>
+    </form>
+    <br>
+    <div>
+        <center><a href="home.html"><font color="white">Back</font></a></center>
+    </div>
+    <script src="registerjs.js"></script>
+
+</body>
+</html>
