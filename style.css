@@ -1,0 +1,111 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    background-image: url("gal.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Heading styling */
+.heading {
+    font-size: 70px;
+    color: rgb(136, 225, 234);
+    font-family: CURLZ MT;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px rgb(4, 4, 67), 0 0 1em rgb(238, 252, 255), 0 0 0.2em rgb(225, 249, 104);
+}
+
+/* Tagline styling */
+.tagline {
+    font-size: 19px;
+    font-style: italic;
+    color: beige;
+    font-family: segoe script;
+    text-shadow: rgb(195, 244, 248) 1px 0 10px;
+}
+
+/* Container for genre buttons */
+.genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 60px;
+}
+
+/* Genre button styling */
+.genre-button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.genre-button img {
+    width: 240px;
+    height: 330px;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+.genre-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Click effect */
+.genre-button:active {
+    transform: scale(0.95);
+}
+
+/* Dropdown Container Styling */
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.dropdown-btn {
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 260px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("gal.gif") ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: azure;
+            font-size: 50px;
+            color: rgb(136, 225, 234);
+            font-family: CURLZ MT;
+            text-shadow: 1px 1px 2px rgb(4, 4, 67), 0 0 1em rgb(238, 252, 255), 0 0 0.2em rgb(225, 249, 104);
+        }
+
+        .login-container {
+            background-color: rgb(15, 44, 81);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(240, 153, 153, 0.904);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-top: 0cap;
+            margin-bottom: 10px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 14px;
+            box-sizing: border-box;
+        }
+
+        .login-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        /* Dropdown Container Styling */
+.dropdown {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.dropdown-btn {
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    min-width: 260px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="dropdown-btn">&#9776;</button>
+        <div class="dropdown-content">
+            <a href="register.html">Sign In</a>
+            <a href="tbr.php">TBR List</a>
+            <a href="logout.html">Log Out</a>
+            <a href="about.html">About Us</a>
+            <a href="home.html">Home Page</a>
+        </div>
+    </div>
+
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm" method="post" action="login.php">
+            <div>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <span id="usernameError" class="error"></span>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <span id="passwordError" class="error"></span>
+            </div><br>
+            <div>
+                <input type="submit" value="Login">
+            </div>
+            <br>
+            <div>
+                <center><font color="white">Don't have an account?</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.html">
+                <font color="blue">Register</font></a></center>
+            </div>
+        </form>
+        <br>
+        <div>
+            <center><a href="home.html"><font color="white">Back</font></a></center>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+             // Prevent form submission
+
+            // Reset error messages
+            document.getElementById('usernameError').textContent = '';
+            document.getElementById('passwordError').textContent = '';
+
+            // Fetch input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Validation flags
+            var hasError = false;
+
+            // Validate Username
+            if (!username) {
+                document.getElementById('usernameError').textContent = 'Username is required.';
+                hasError = true;
+            }
+
+            // Validate Password
+            if (!password) {
+                document.getElementById('passwordError').textContent = 'Password is required.';
+                hasError = true;
+            }
+
+            // Submit the form if no validation errors
+            if (hasError) {
+                event.preventDefault();
+                // Here you can proceed with form submission or other actions
+            }
+        });
+    </script>
+
+</body>
+</html>
