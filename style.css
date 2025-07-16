@@ -31,16 +31,16 @@ body {
 
 /* Container for genre buttons */
 .genre-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 buttons in a row */
-    gap: 40px;
-    justify-items: center;
-    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 60px;
 }
 
 /* Genre button styling */
 .genre-button {
-    border: none;
+    border: 0;
     background-color: transparent;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -48,7 +48,7 @@ body {
 
 .genre-button img {
     width: 240px;
-    height: 320px;
+    height: 330px;
     border-radius: 10px;
 }
 

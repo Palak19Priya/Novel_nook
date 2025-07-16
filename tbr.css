@@ -18,17 +18,28 @@ h1 {
     margin: 0;
 }
 .container {
-    max-width: 1180px;
+    max-width: 800px;
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
+    padding-left: 0;
+    padding-right: 0;    
     background-color: rgba(13, 20, 137, 0.406);
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 .tbr-grid {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
+
+.tbr-grid > div {
+    flex: 1 1 250px; /* grow, shrink, base width */
+    max-width: 300px; /* optional: restrict max width */
+}
+
 .column {
     background-color: rgba(9, 7, 41, 0.548);
     color: yellow;

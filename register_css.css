@@ -28,7 +28,7 @@ div {
     text-shadow: 1px 1px 2px rgb(4, 4, 67), 0 0 1em rgb(238, 252, 255), 0 0 0.2em rgb(225, 249, 104);
 }
 
-#registrationForm{ 
+#registrationForm{
     border: 2px solid rgb(175, 231, 236);
     border-style:double;
     border-width: 5px;
@@ -36,6 +36,12 @@ div {
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius:20px ;
+}
+
+.signinform {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
 }
 
 .menu div{
@@ -114,7 +120,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.8);
     min-width: 260px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    border-radius: 5px; 
     z-index: 1;
 }
 

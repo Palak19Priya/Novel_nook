@@ -18,7 +18,7 @@ function clearForm() {
 
 // Form validation and handling
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
+   // event.preventDefault(); // Prevent form submission
 
     // Reset error messages
     var errors = document.querySelectorAll('.error');
@@ -105,9 +105,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
         hasError = true;
     }
 
-    // If no errors, submit the form
-    if (!hasError) {
-        alert('Account created successfully! You can login using your username and password and enjoy personalized experience.');
-        // Here, you can proceed with actual form submission or further processing
+    // If has errors,prevent form submission
+    if (hasError) {
+        event.preventDefault();
     }
 });

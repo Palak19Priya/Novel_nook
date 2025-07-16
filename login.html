@@ -122,17 +122,17 @@
         <button class="dropdown-btn">&#9776;</button>
         <div class="dropdown-content">
             <a href="register.html">Sign In</a>
-            <a href="tbr.html">TBR List</a>
+            <a href="tbr.php">TBR List</a>
             <a href="logout.html">Log Out</a>
             <a href="about.html">About Us</a>
-            <a href="index.html">Home Page</a>
+            <a href="home.html">Home Page</a>
         </div>
     </div>
 
 
     <div class="login-container">
         <h2>Login</h2>
-        <form id="loginForm">
+        <form id="loginForm" method="post" action="login.php">
             <div>
                 <input type="text" id="username" name="username" placeholder="Username">
                 <span id="usernameError" class="error"></span>
@@ -152,13 +152,13 @@
         </form>
         <br>
         <div>
-            <center><a href="index.html"><font color="white">Back</font></a></center>
+            <center><a href="home.html"><font color="white">Back</font></a></center>
         </div>
     </div>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form submission
+             // Prevent form submission
 
             // Reset error messages
             document.getElementById('usernameError').textContent = '';
@@ -175,26 +175,17 @@
             if (!username) {
                 document.getElementById('usernameError').textContent = 'Username is required.';
                 hasError = true;
-            } else if (!/^[a-zA-Z0-9_]{3,15}$/.test(username)) {
-                document.getElementById('usernameError').textContent = 'Username must be 3-15 characters and alphanumeric.';
-                hasError = true;
             }
 
             // Validate Password
             if (!password) {
                 document.getElementById('passwordError').textContent = 'Password is required.';
                 hasError = true;
-            } else if (password.length < 8 || password.length > 10) {
-                document.getElementById('passwordError').textContent = 'Password must be 8-10 characters.';
-                hasError = true;
-            } else if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!])/.test(password)) {
-                document.getElementById('passwordError').textContent = 'Password must contain uppercase, lowercase, number, and special character.';
-                hasError = true;
             }
 
             // Submit the form if no validation errors
-            if (!hasError) {
-                alert('Login successful!');
+            if (hasError) {
+                event.preventDefault();
                 // Here you can proceed with form submission or other actions
             }
         });
