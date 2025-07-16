@@ -16,7 +16,7 @@
         <a href="login.html">Login</a>
         <a href="register.html">Sign In</a>
         <a href="home.html">Home Page</a>
-        <a href="logout.html">Log Out</a>
+        <a href="logout.php">Log Out</a>
         <a href="about.html">About Us</a>
     </div>
 </div>
