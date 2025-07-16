@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your reading journey with Novel Nook's TBR list. Track books to be read, books already read, and books you wish to order.">
+    <title>TBR List - Novel Nook</title>
+<link rel="stylesheet" href="tbr.css">
+</head>
+<body>
+
+    <div class="dropdown">
+        <button class="dropdown-btn">&#9776;</button>
+        <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="register.html">Sign In</a>
+            <a href="tbr.html">TBR List</a>
+            <a href="logout.html">Log Out</a>
+            <a href="about.html">About Us</a>
+        </div>
+    </div>
+    
+<header>
+    <h1><center>Your TBR List</center></h1>
+</header>
+
+<div class="container">
+    <div class="tbr-grid">
+        <!-- To Be Read Column -->
+        <div class="column">
+            <h2>To Be Read</h2>
+            <form id="tbrForm">
+                <input type="text" id="tbrInput" placeholder="Enter book title" />
+                <input type="submit" value="Add to TBR List" />
+            </form>
+            <table id="tbrTable">
+                <thead>
+                    <tr><th>Book Title</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Read Column -->
+        <div class="column">
+            <h2>Read</h2>
+            <form id="readForm">
+                <input type="text" id="readInput" placeholder="Enter book title" />
+                <input type="submit" value="Add to Read List" />
+            </form>
+            <table id="readTable">
+                <thead>
+                    <tr><th>Book Title</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- To Be Ordered Column -->
+        <div class="column">
+            <h2>To Be Ordered</h2>
+            <form id="toOrderForm">
+                <input type="text" id="toOrderInput" placeholder="Enter book title" />
+                <input type="submit" value="Add to Order List" />
+            </form>
+            <table id="toOrderTable">
+                <thead>
+                    <tr><th>Book Title</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Ordered Column -->
+        <div class="column">
+            <h2>Ordered</h2>
+            <form id="orderedForm">
+                <input type="text" id="orderedInput" placeholder="Enter book title" />
+                <input type="submit" value="Add to Ordered List" />
+            </form>
+            <table id="orderedTable">
+                <thead>
+                    <tr><th>Book Title</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    // Function to handle form submissions and adding rows to the table
+    function handleFormSubmission(formId, inputId, tableId) {
+        document.getElementById(formId).addEventListener('submit', function(e) {
+            e.preventDefault();
+            const inputValue = document.getElementById(inputId).value;
+            if (inputValue) {
+                const table = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+                const newRow = table.insertRow();
+                const newCell = newRow.insertCell(0);
+                newCell.textContent = inputValue;
+                document.getElementById(inputId).value = ''; // Clear the textbox
+            }
+        });
+    }
+
+    // Add event listeners for each form
+    handleFormSubmission('tbrForm', 'tbrInput', 'tbrTable');
+    handleFormSubmission('readForm', 'readInput', 'readTable');
+    handleFormSubmission('toOrderForm', 'toOrderInput', 'toOrderTable');
+    handleFormSubmission('orderedForm', 'orderedInput', 'orderedTable');
+</script>
+
+</body>
+</html>
